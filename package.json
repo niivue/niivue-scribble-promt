@@ -1,0 +1,21 @@
+{
+    "name": "niivue-scribble-prompt",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build && npm run copyMJS && npm run copyWASM",
+      "copyMJS": "cp ./node_modules/onnxruntime-web/dist/*.mjs ./dist/assets/",
+      "copyWASM": "cp ./node_modules/onnxruntime-web/dist/*.wasm ./dist/assets/",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "@niivue/niivue": "^0.45.1",
+      "onnxruntime-web": "^1.19.2"
+    },
+    "devDependencies": {
+      "vite": "^5.2.0"
+    }
+  }
+  
